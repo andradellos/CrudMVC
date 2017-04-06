@@ -1,0 +1,32 @@
+﻿
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@*@Html.Action("Listar")*@
+<div id="listagemDeLivros"></div>
+@section scripts{
+    <script type="text/javascript">
+        $(document).ready(ConfigurarControles);
+
+        function ConfigurarControles()
+        {
+            $("#listagemDeLivros").load("@Url.Action("Listar")");
+        }
+        var pagina = 1;
+        function paginar(valor)
+        {
+            var paginaNova = pagina + valor;
+            $("#listagemDeLivros").load("@Url.Action("Listar")", { pagina: paginaNova });
+            pagina = paginaNova;
+        }
+    </script>
+    
+    }
