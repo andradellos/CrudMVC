@@ -161,11 +161,15 @@
     <Compile Include="Controllers\GenerosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LivrosController.cs" />
+    <Compile Include="Controllers\tstePostController.cs" />
+    <Compile Include="Controllers\VariosBotoesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Genero.cs" />
     <Compile Include="Models\Livro.cs" />
+    <Compile Include="Models\TestarPost.cs" />
+    <Compile Include="Models\VariosBotoes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -217,9 +221,13 @@
     <Content Include="Views\Livros\Edit.cshtml" />
     <Content Include="Views\Livros\Index.cshtml" />
     <Content Include="Views\Livros\_Listar.cshtml" />
+    <Content Include="Views\VariosBotoes\Index.cshtml" />
+    <Content Include="Views\VariosBotoes\Somar.cshtml" />
+    <Content Include="Views\tstePost\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\TestePost\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
