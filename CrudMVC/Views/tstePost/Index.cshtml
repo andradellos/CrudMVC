@@ -204,11 +204,13 @@
             alert($("#table tr.selected td:first").html());
         });
 
+        $('#tabela').find('input[name=botao]').click(function(){
+            var teste = $(this).parent().next('td').text();
+        });
 
 
-
-
-
+       ////https://social.msdn.microsoft.com/Forums/pt-BR/7affcf08-a421-436d-bdd3-e85255c4b9d9/trazer-valor-de-um-coluna-pelo-controle-na-linha-da-table-jquery?forum=webgeralpt
+        //https://www.scriptbrasil.com.br/forum/topic/157811-trazer-valor-de-um-coluna-pelo-controle-na-linha-da-table-jquery/
 
 
 
