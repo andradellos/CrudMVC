@@ -85,5 +85,21 @@ namespace CrudMVC.Controllers
                 return View();
             }
         }
+
+
+       
+        //public ActionResult testando(int id, string autor, FormCollection collection)
+        //{
+        //    try
+        //    {
+        //        // TODO: Add delete logic here
+
+        //        return RedirectToAction("Index");
+        //    }
+        //    catch
+        //    {
+        //        return View();
+        //    }
+        //}
     }
 }

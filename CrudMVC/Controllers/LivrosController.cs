@@ -134,5 +134,24 @@ namespace CrudMVC.Controllers
             }
             base.Dispose(disposing);
         }
+
+
+
+
+
+
+        public Livro testando(int id, string autor, int md_pais, Livro collection)
+        {
+            //try
+            //{
+            //    // TODO: Add delete logic here
+
+                return collection;
+            //}
+            //catch
+            //{
+            //    return View();
+            //}
+        }
     }
 }

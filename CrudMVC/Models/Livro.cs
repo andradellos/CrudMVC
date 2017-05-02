@@ -16,5 +16,7 @@ namespace CrudMVC.Models
 
         public Genero Genero { get; set; }
         public int GeneroId { get; set; }
+        public int cmd_pais { get; set; }
+        
     }
 }

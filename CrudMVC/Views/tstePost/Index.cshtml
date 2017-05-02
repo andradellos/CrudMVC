@@ -1,4 +1,6 @@
-﻿@model CrudMVC.Models.TestarPost
+﻿@model CrudMVC.Models.Livro
+
+@using MVCGrid.Web
 
 @{
     ViewBag.Title = "Index";
@@ -9,33 +11,160 @@
 
 @using (Html.BeginForm(null, null, FormMethod.Post, new { id = "ajax_form" }))
 {
-                @Html.AntiForgeryToken()
+    @Html.AntiForgeryToken()
 
-                <div class="form-horizontal">
+    <style type="text/css">
+        .row-highlight {
+            background-color: Yellow;
+        }
+
+        .selected {
+            background-color: brown;
+            color: #FFF;
+        }
+    </style>
+
+
+    <div class="form-horizontal">
         <h4>TestarPost</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.nome, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Titulo, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.nome, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.nome, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Titulo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Titulo, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.livro, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Autor, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.livro, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.livro, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Autor, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Autor, "", new { @class = "text-danger" })
             </div>
         </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">DropBox</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Autor, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Autor, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        @*@{
+                WebGrid grid =new WebGrid(Model, selectionFieldName: "SelectedRow");
+
+
+
+            }*@
+
+        <script type="text/javascript">
+
+            function GetGrid() {
+                var texto = $('#MVCGridTable_grvManolo tr:eq(1) td:eq(3)').find(":selected").text();
+                var Valor = $('#MVCGridTable_grvManolo tr:eq(1) td:eq(3)').find(":selected").val();
+
+                alert(texto + ' -  Valor :' + Valor);
+            }
+
+
+            function BotaoValidar() {
+
+
+                var tr = $('#MVCGridTable_grvManolo').find('tr');
+                $("#idbtvaidar").bind('click', function (event) {
+                    var values = '';
+                    tr.removeClass('row-highlight');
+                    var tds = $(this).addClass('row-highlight').find('td');
+
+                    var zero = tds[0].innerHTML;
+                    var Um = tds[1].innerHTML;
+                    var Dois = tds[2].innerHTML;
+                    var Tres = $(this).addClass('row-highlight').find(":selected").text();
+
+                    alert(zero + ' - ' + Um + ' - ' + Dois + ' - ' + Tres)
+
+                });
+
+
+            }
+
+
+
+
+
+
+        </script>
+        <input id="idbtnnovo" type="button" value="teste" onclick="GetGrid();" />
+
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </div>
+
+        <div>
+
+            @Html.MVCGrid("grvManolo")
+        </div>
+
+        @*<table id="tbl" style="border: solid 1px black">
+                <tr>
+                    <td>
+                        1
+                    </td>
+                    <td>
+                        a
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        2
+                    </td>
+                    <td>
+                        b
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        3
+                    </td>
+                    <td>
+                        c
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <div id="message">
+            </div>*@
+
+
+
+        <table id="table">
+            <tr>
+                <td>1 Ferrari F138</td>
+                <td>1 000€</td>
+                <td>1 200€</td>
+
+            </tr>
+            <tr>
+                <td>2 Ferrari F138</td>
+                <td>1 000€</td>
+                <td>1 200€</td>
+
+            </tr>
+            <tr>
+                <td>3 Ferrari F138</td>
+                <td>1 000€</td>
+                <td>1 200€</td>
+
+            </tr>
+        </table>
+        <input type="button" id="tst" value="OK"/>
+     
+
     </div>
 }
 
@@ -43,22 +172,73 @@
     @Html.ActionLink("Back to List", "Index")
 </div>
 
- 
+
 <script type="text/javascript">
-	jQuery(document).ready(function(){
-		jQuery('#ajax_form').submit(function(){
-			var dados = jQuery( this ).serialize();
- 
+    jQuery(document).ready(function () {
+        jQuery('#ajax_form').submit(function () {
+            var dados = jQuery(this).serialize();
 
-			var resposta = confirm("Dados não inseridos serão perdidos . Deseja continuar?");
 
-			if (resposta == true) {
-			    return true;
-			}
-			if (resposta == false) {
-			    return false;
-			}
-			
-		});
-	});
+            var resposta = confirm("Dados não inseridos serão perdidos . Deseja continuar?");
+
+            if (resposta == true) {
+                return true;
+            }
+            if (resposta == false) {
+                return false;
+            }
+
+        });
+
+
+
+
+        $("#table tr").click(function () {
+            $(this).addClass('selected').siblings().removeClass('selected');
+            var value = $(this).find('td:first').html();
+           // alert(value);
+        });
+
+        $('#idbtvaidar').on('click', function (e) {
+            $(this).addClass('selected').siblings().removeClass('selected');
+            alert($("#table tr.selected td:first").html());
+        });
+
+
+
+
+
+
+
+
+
+        //$("#idbtvaidar").click(function () {
+        //    var message = $('#message');
+        //    var tr = $('#MVCGridTable_grvManolo').find('tr');
+        //    tr.bind(function (event) {
+        //        var values = '';
+        //        tr.removeClass('row-highlight');
+        //        var tds = $(this).addClass('row-highlight').find('td');
+
+        //        var zero = tds[0].innerHTML;
+        //        var Um = tds[1].innerHTML;
+        //        var Dois = tds[2].innerHTML;
+        //        var Tres = $(this).addClass('row-highlight').find(":selected").text();
+
+        //        alert(zero + ' - ' + Um + ' - ' + Dois + ' - ' + Tres)
+
+        //        //$.each(tds, function (index, item) {
+        //        //    values = values + 'td' + (index + 1) + ':' + item.innerHTML + '<br/>';
+
+        //        //    var texto = $('#MVCGridTable_grvManolo tr:eq(1) td:eq(3)').find(":selected").text();
+        //        //});
+        //        //message.html(values);
+
+
+        //    });
+        //});
+
+
+
+    });
 </script>

@@ -14,6 +14,7 @@ namespace CrudMVC
     {
         protected void Application_Start()
         {
+            //MVCGridConfig.RegisterGrids();
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
