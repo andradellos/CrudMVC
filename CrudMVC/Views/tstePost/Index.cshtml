@@ -52,6 +52,20 @@
                 @Html.ValidationMessageFor(model => model.Autor, "", new { @class = "text-danger" })
             </div>
         </div>
+
+        <table class="table table-condensed">
+            @foreach (var item in Model.ListaPedidos)
+            {
+                <tr>
+                    <td>@item.nome</td>
+                    <td>@item.livro</td>
+                </tr>
+            }
+        </table>
+        
+
+
+
         @*@{
                 WebGrid grid =new WebGrid(Model, selectionFieldName: "SelectedRow");
 

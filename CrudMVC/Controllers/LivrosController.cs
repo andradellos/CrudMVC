@@ -14,16 +14,19 @@ namespace CrudMVC.Controllers
     public class LivrosController : Controller
     {
         private LivroContexto db = new LivroContexto();
+        Livro clslll;
 
         // GET: Livros
         public ActionResult Index()
         {
-           return View();
+            clslll = Livro.CriarConexaoComBancoDeDados();
+            clslll.ListaPedidos.Add(new TestarPost { nome = "Laura", livro = "Livro Um" });
+            return View();
         }
-        public PartialViewResult Listar(int pagina = 1 , int registros = 5)
+        public PartialViewResult Listar(int pagina = 1, int registros = 5)
         {
             var livros = db.Livros.Include(l => l.Genero);
-             var livrospaginados = livros.OrderBy(l => l.Titulo).Skip((pagina -1) * registros).Take(5);
+            var livrospaginados = livros.OrderBy(l => l.Titulo).Skip((pagina - 1) * registros).Take(5);
             return PartialView("_Listar", livrospaginados.ToList());
         }
 
@@ -58,6 +61,7 @@ namespace CrudMVC.Controllers
         {
             if (ModelState.IsValid)
             {
+                clslll.ListaPedidos.Add(new TestarPost { nome = "Laura", livro = "Livro Um" });
                 db.Livros.Add(livro);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -146,7 +150,7 @@ namespace CrudMVC.Controllers
             //{
             //    // TODO: Add delete logic here
 
-                return collection;
+            return collection;
             //}
             //catch
             //{

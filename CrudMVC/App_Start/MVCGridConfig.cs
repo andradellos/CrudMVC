@@ -26,7 +26,7 @@ namespace CrudMVC
         public static string Options(int CodValue)
         {
             String retorno = null;
-
+            
             retorno = "<select id='cmd_pais' name='cmd_pais'>";
             retorno += "<option value='-1'>Selecione</option>";
 
@@ -53,8 +53,8 @@ namespace CrudMVC
         {
             List<Livro> ListaLivro = new List<Models.Livro>();
 
-            ListaLivro.Add(new Livro() { Id = 1, Titulo = "Titulo um", Autor = "altor um", AnoEdicao = 1987, Genero = null, Valor = 30, cmd_pais = 2 });
-            ListaLivro.Add(new Livro() { Id = 2, Titulo = "Titulo Dois", Autor = "altor Dois", AnoEdicao = 1988, Genero = null, Valor = 40, cmd_pais = 1 });
+            //ListaLivro.Add(new Livro() { Id = 1, Titulo = "Titulo um", Autor = "altor um", AnoEdicao = 1987, Genero = null, Valor = 30, cmd_pais = 2 });
+            //ListaLivro.Add(new Livro() { Id = 2, Titulo = "Titulo Dois", Autor = "altor Dois", AnoEdicao = 1988, Genero = null, Valor = 40, cmd_pais = 1 });
             return ListaLivro;
 
         }
@@ -95,8 +95,6 @@ namespace CrudMVC
 
                     //   .WithValueTemplate("<select id='cmd_pais' name='cmd_pais'>" + Options({Value}) + "</ select>", false);
 
-
-
                     cols.Add("Autor").WithSorting(false).WithHtmlEncoding(false)
                         .WithValueExpression((p, c) => c.UrlHelper.Action("testando", "Livros", new { id = p.Id, autor = p.Autor, md_pais = p.cmd_pais }))
                         .WithValueTemplate("<a href='{Value}'>{Row.Id}</a>", false);
@@ -114,14 +112,13 @@ namespace CrudMVC
                     // Use Entity Framework, a module from your IoC Container, or any other method.
                     //Return QueryResult object containing IEnumerable<YouModelItem>
 
-
                     var result = new QueryResult<Livro>();
 
                     //using (var db = new LivroContexto())
                     //{
                     //    result.Items = db.Livros.ToList();
                     //}
-                    result.Items = ClsLivros();
+                    //result.Items = Session["MyProp"] as List<Livro>;
 
                     return result;
 

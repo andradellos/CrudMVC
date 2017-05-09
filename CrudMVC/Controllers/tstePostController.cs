@@ -3,14 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using CrudMVC.Models;
+
 
 namespace CrudMVC.Controllers
 {
     public class tstePostController : Controller
     {
         // GET: tstePost
+        Livro clslll = Livro.CriarConexaoComBancoDeDados();
         public ActionResult Index()
         {
+
+
+            clslll.ListaPedidos.Add(new TestarPost { nome = "Laura", livro = "Livro Um" });
             return View();
         }
 
@@ -33,7 +39,7 @@ namespace CrudMVC.Controllers
             try
             {
                 // TODO: Add insert logic here
-
+                clslll.ListaPedidos.Add(new TestarPost { nome = "Laura12", livro = "Livro Dois" });
                 return RedirectToAction("Index");
             }
             catch
