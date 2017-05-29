@@ -26,6 +26,7 @@ C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\Microsoft.AI.WindowsServer
 C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\Microsoft.ApplicationInsights.dll
 C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\MVCGrid.dll
 C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\Newtonsoft.Json.dll
 C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\System.Web.Helpers.dll
 C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\System.Web.Mvc.dll
@@ -34,6 +35,7 @@ C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\System.Web.Razor.dll
 C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\System.Web.WebPages.Deployment.dll
 C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\System.Web.WebPages.dll
 C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\System.Web.WebPages.Razor.dll
+C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\WebActivatorEx.dll
 C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\WebGrease.dll
 C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\EntityFramework.xml
 C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\EntityFramework.SqlServer.xml
@@ -43,6 +45,7 @@ C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\Microsoft.AI.Web.xml
 C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\Microsoft.ApplicationInsights.xml
 C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\MVCGrid.xml
 C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\System.Web.Helpers.xml
 C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\System.Web.Mvc.xml
 C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\System.Web.Optimization.xml
@@ -54,7 +57,3 @@ C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\Antlr3.Runtime.pdb
 C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\Newtonsoft.Json.xml
 C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\obj\Debug\CrudMVC.dll
 C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\obj\Debug\CrudMVC.pdb
-C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\MVCGrid.dll
-C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\WebActivatorEx.dll
-C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\MVCGrid.xml
-C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\obj\Debug\CrudMVC.csprojResolveAssemblyReference.cache
