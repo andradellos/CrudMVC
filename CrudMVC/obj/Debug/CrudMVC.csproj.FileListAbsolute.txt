@@ -57,3 +57,4 @@ C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\Antlr3.Runtime.pdb
 C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\bin\Newtonsoft.Json.xml
 C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\obj\Debug\CrudMVC.dll
 C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\obj\Debug\CrudMVC.pdb
+C:\Users\Emanuel\Documents\GitHub\CrudMVC\CrudMVC\obj\Debug\CrudMVC.csprojResolveAssemblyReference.cache

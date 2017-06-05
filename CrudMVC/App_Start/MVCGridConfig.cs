@@ -108,19 +108,19 @@ namespace CrudMVC
                 })
                 .WithRetrieveDataMethod((context) =>
                 {
-                    // Query your data here. Obey Ordering, paging and filtering parameters given in the context.QueryOptions.
-                    // Use Entity Framework, a module from your IoC Container, or any other method.
-                    //Return QueryResult object containing IEnumerable<YouModelItem>
+					// Query your data here. Obey Ordering, paging and filtering parameters given in the context.QueryOptions.
+					// Use Entity Framework, a module from your IoC Container, or any other method.
+					//Return QueryResult object containing IEnumerable<YouModelItem>
 
-                    var result = new QueryResult<Livro>();
+					QueryResult<Livro> result = new QueryResult<Livro>();
+					
+					using (var db = new LivroContexto())
+					{
+						result.Items = db.Livros;
+					}
+					//result.Items = Session["MyProp"] as List<Livro>;
 
-                    //using (var db = new LivroContexto())
-                    //{
-                    //    result.Items = db.Livros.ToList();
-                    //}
-                    //result.Items = Session["MyProp"] as List<Livro>;
-
-                    return result;
+					return result;
 
 
                 })

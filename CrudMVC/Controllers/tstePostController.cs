@@ -14,8 +14,6 @@ namespace CrudMVC.Controllers
         Livro clslll = Livro.CriarConexaoComBancoDeDados();
         public ActionResult Index()
         {
-
-
             clslll.ListaPedidos.Add(new TestarPost { nome = "Laura", livro = "Livro Um" });
             return View();
         }
